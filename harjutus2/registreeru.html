@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registreerumisvorm</title>
+    <style>
+        h1{
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 18px;
+            color: rgb(255, 255, 255);
+        }
+        #box{
+            min-height: 200px;
+            min-width: 200px;
+            width: 20%;
+            border-style: solid;
+            border-color: rgb(77, 35, 70);
+            background-color: rgb(77, 35, 70);
+            border-radius: 10px;
+            border-width: 1px; 
+            padding: 20px;
+            box-shadow: 10px 10px 10px rgb(151, 151, 151);
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top:100px;
+        }
+        .submit{
+            background-color: rgb(77, 35, 70);
+            border-style: solid;
+            border-color: white;
+            font-weight: bold;
+            margin: 15px;
+            border-radius: 5px;;
+            cursor: pointer;
+            width: 50%;
+            color: white;
+            box-shadow: 0 0px 2px 0 rgb(255, 255, 255);
+            padding:10px
+
+        }
+        .submit:hover{
+            background-color: white;
+            border-color: white;
+            font-weight: bold;
+            color: rgb(77, 35, 70);
+            box-shadow: 0 0px 2px 0 rgb(255, 255, 255);
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 12px;
+        }
+        a:hover{
+            color: rgb(179, 255, 0);
+        }
+        .tekst {
+            border-style: solid;
+            border-color: white;
+            border-radius: 5px;
+            height: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: left;
+            font-size: 12px;
+            width: 80%;
+            margin: 8px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box">
+    <h1>REGISTREERI KASUTAJA</h1>
+    <form action="#" method="get">
+        <div>
+           <!-- <label for="user">Nimi</label> -->
+            <input type="text" name="user" placeholder="Nimi" class="tekst">
+        </div>
+        <div class="element">
+           <!-- <label for="name">Email</label> -->
+            <input type="text" name="name" placeholder="E-mail" class="tekst">
+        </div>
+        <div class="element">
+          <!-- <label for="password">Salasõna</label> -->
+            <input type="password" name="password1" placeholder="Salasõna" class="tekst">
+        </div>
+        <div class="element">
+           <!-- <label for="password">Korda salasõna</label> -->
+            <input type="password" name="password2" placeholder="Korda salasõna" class="tekst">
+        </div>
+        <div>
+            <input type="checkbox" name="agreement">
+            <label for="agreement"></label>
+            <a href="tingimused.html">Nõustu tingimustega</a>
+        </div>
+        <div>
+            <input type="submit" value="EDASI" class="submit">
+        </div>
+    </div>
+    </form>
+</body>
+</html>
