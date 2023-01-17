@@ -1,0 +1,19 @@
+html{
+    font-size: 20px;
+}
+body{
+    background-color: antiquewhite;
+    font-family: 'Rubik', sans-serif;
+}
+.container{
+    background-color: white;
+}
+.uudis-pealkiri{
+    font-size: 1.5rem;
+    color: rgb(2, 83, 45);
+}
+.uudis-kuupaev{
+    font-size: 0.7rem;
+    color: grey;
+    font-weight: bold;
+}
