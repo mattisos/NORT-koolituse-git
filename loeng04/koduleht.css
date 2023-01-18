@@ -26,14 +26,14 @@ header img {
 nav {
     background-color: grey;
     width: 100%;
-    height: 30px;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 nav ul {
-    display: flex;
+    display: block;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -69,8 +69,7 @@ nav ul li a {
 }
 
 .reklaam {
-    display: flex;
-    justify-content: center;
+    display: none;
 }
 
 .reklaam a {
@@ -79,4 +78,21 @@ nav ul li a {
 
 .reklaam img {
     width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+    .reklaam {
+        display: flex;
+        justify-content: center;
+    }
+    nav ul {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    
+    }
+    nav {
+        height: 30px;
+    }
 }
