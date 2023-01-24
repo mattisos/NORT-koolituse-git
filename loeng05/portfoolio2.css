@@ -1,0 +1,7 @@
+.jumbotron {
+    background-color: purple;
+    color: white;
+    background-image: url('./Mets.png');
+    background-size: cover;
+    background-position: center;
+}
