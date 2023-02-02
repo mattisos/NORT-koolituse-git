@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 19px;
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+
+}
+
+.container {
+
+    width: 80%;
+    min-height: 400px;
+    background-color: white;
+    padding: 10px;
+    
+}
+
+.rida {
+    background-color: lightblue;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+.rida img {
+    max-width: 10px;
+    margin-right: 10px;
+}

@@ -30,8 +30,9 @@
 
 .paiserida {
     display: flex;
-    padding-top: 20px;
+    align-items: center;
     justify-content: space-between;
+    padding-top: 20px;
 }
 
 nav{
@@ -41,16 +42,16 @@ nav{
 nav ul {
     list-style-type: none;
     display: flex;
-    margin-top: 20px;
 }
 
 
 nav ul li a{
     color: black;
-    font-size: 16px;
+    font-size: 16.67px;
     font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 2.67px;
 }
 
 nav ul li a:hover{
@@ -66,4 +67,92 @@ nav ul li a:hover{
         background-position: center;
         background-size: cover;
     }
+}
+
+.pealkiri_pilt {
+    display:none;
+}
+
+.rida {
+    display: flex;
+}
+
+.pealkiri-kastid{
+    padding-top: 100px;
+}
+
+.liblikas1{
+    width:75.27px ;
+    height: 66.04px;
+    margin-top: -40px;
+    margin-left: auto;
+}
+.pealkiri-kastid h2{
+    font-size: 39.57px;
+    font-family: 'montserrat';
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.liblikas2 {
+    height: 32px;
+    width: 60px;
+    margin-left: -40px;
+    margin-right:-25px;
+}
+
+.pealkiri-kastid h1{
+    font-size:74px;
+    font-family: 'montserrat';
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+    .pealkiri_pilt{
+        display:block;
+        margin-top: 50px;
+    }
+
+    .pealkiri-kastid{
+        padding-top: 230px;
+    }
+}
+
+.pealkiri-kastid h3 {
+    font-size: 20.83px;
+    font-family: 'montserrat';
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 1;
+    padding-right: 80px;
+}
+
+.pealkiri-kastid button {
+    background-color: #0b0b0b;
+    width: 247px;
+    height: 58px;
+    color: white;
+    font-family: 'montserrat';
+    font-size: 12.5px;
+    letter-spacing: 2.25px;
+    text-transform: uppercase;
+    margin-top: 30px;
+
+}
+
+.pealkiri_pilt .matkaja {
+    height: 750px;
+    width: 750px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.pealkiri_pilt .vari {
+width: 1091;
+height: 89px;
+margin-left: -135px;
+margin-top: -40px;
+position: absolute;
+z-index: -1;
 }
