@@ -1,0 +1,90 @@
+.paiskonteiner {
+    width: 100%;
+}
+
+.pais-logoala {
+    display: flex;
+}
+
+.pais-logo {
+    height: 64px;
+    width: 66px;
+}
+
+.pais-nimi {
+    letter-spacing: 0px;
+    color:#0b0b0b;
+    font-size: 28px;
+    line-height: 28px;
+    text-align: left;
+    width: 100px;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 4px;
+
+}
+
+.paiserida {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+nav{
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+
+nav ul li a{
+    color: black;
+    font-size: 16.67px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2.67px;
+}
+
+nav ul li a:hover{
+    color:#436E67;
+    text-decoration: none;
+}
+
+.pealkiri h2 {
+    font-family: 'montserrat';
+    font-size: 24px;
+    margin-top: 80px;
+    margin-left: 120px;
+}
+.uudised {
+    columns: 4;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+
+.card-body {
+    font-family: 'montserrat';
+}
+
+.card-body h4 {
+    color:#436E67;
+}
+
+.card-body h6 {
+    color: grey;
+}
+
+.card-body p {
+    font-size: 14px;
+}
+
+.card {
+    box-shadow: 10px 10px 10px rgb(221, 221, 221);
+}
