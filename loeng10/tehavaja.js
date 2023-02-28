@@ -25,18 +25,27 @@ const ylesanded = [
     ylesanne3,
 ]
 
+function muudaKasTehtudVaartusVastupidisek(index) {
+    const ylesanne = ylesanded[index]
+    ylesanne.kasTehtud = !ylesanne.kasTehtud
+    valjastaYlesanded()
+}
+
 //parameeter - objekt ylesanne
 // tagastab - teksti kujul ühe ülesande htmli
-function koostaYlesandeHTML(ylesanne) {
+function koostaYlesandeHTML(ylesanne, index) {
     let margitud = ''
+    let tehtud = ''
+
 
     if (ylesanne.kasTehtud){
         margitud = 'checked'
+        tehtud ='tehtud'
     }
 
     const ylesanneHTML = `
-    <div class="ylesanne row">
-        <div class"kasTehtud col-1"><input type="checkbox" name="kasTehtud" ${margitud}></div>
+    <div class="ylesanne row ${tehtud}">
+        <div class"kasTehtud col-1"><input onclick="muudaKasTehtudVaartusVastupidisek(${index})" type="checkbox" name="kasTehtud" ${margitud}></div>
         <div class="kirjeldus col-5">${ylesanne.kirjeldus}</div>
         <div class="kategooria col-3">${ylesanne.kategooria}</div>
         <div class="olulisus col-2">${ylesanne.olulisus}</div>
@@ -45,10 +54,33 @@ function koostaYlesandeHTML(ylesanne) {
     return ylesanneHTML
 }
 
-let koguValjundHTML = ''
+function valjastaYlesanded() {
 
-for (let ylesanne of ylesanded) {
-koguValjundHTML += koostaYlesandeHTML(ylesanne)
+    let koguValjundHTML = ''
+
+    let index = 0
+    for (let ylesanne of ylesanded) {
+    koguValjundHTML += koostaYlesandeHTML(ylesanne, index)
+    index++
+    }
+    
+    document.getElementById('valjund').innerHTML = koguValjundHTML
+
 }
 
-document.getElementById('valjund').innerHTML = koguValjundHTML
+
+function lisaUusYlesanne() {
+    const ylesandeTekst = document.getElementById('ylesanne').value 
+    const olulisus = document.getElementById('olulisus').value
+    const ylesanne = {
+        kirjeldus: ylesandeTekst,
+        olulisus:3,
+        kasTehtud: false,
+        kategooria: 'heaolu'
+    }
+
+    ylesanded.push(ylesanne)
+    valjastaYlesanded()
+}
+
+valjastaYlesanded()

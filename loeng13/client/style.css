@@ -1,0 +1,104 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    background-color: rgb(25, 25, 25);
+    color: rgb(230, 230, 230);
+  }
+  
+  .app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 90vh;
+  }
+  
+  .input-container {
+    display: flex;
+    margin-bottom: 50px;
+  }
+  
+  #todo-input {
+    height: 40px;
+    width: 300px;
+    font-size: 18px;
+    padding-left: 8px;
+    background: rgb(46, 46, 46);
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 5px;
+    caret-color: rgb(150, 150, 150);
+    color: rgb(219, 219, 219);
+    transition: all 0.2s;
+  }
+  
+  #todo-input::placeholder {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(216, 216, 216);
+    font-size: 14px;
+  }
+  
+  #todo-input:focus-visible {
+    outline: goldenrod;
+    border-color: goldenrod;
+  }
+  
+  #todo-input:hover {
+    background: rgb(45, 45, 45);
+    border-color: rgb(150, 150, 150);
+  }
+  
+  #add-todo {
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 44px;
+    background-color: rgb(0, 45, 48);
+    border: 1px solid rgb(0, 45, 48);
+    color: rgb(230, 230, 230);
+    text-transform: uppercase;
+    border-radius: 5px;
+    margin-left: 15px;
+    transition: all 0.2s;
+  }
+  
+  #add-todo:hover {
+    border-color: rgb(1, 67, 71);
+    background-color: rgb(1, 67, 71);
+  }
+
+  ---
+  
+  #todo-list {
+    padding: 0;
+  }
+  
+  #todo-list > li {
+    font-size: 24px;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border-bottom: 2px solid rgb(230, 230, 230);
+    width: 300px;
+    justify-content: space-between;
+  }
+  
+  #todo-list > li > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  #todo-list > li > div > * {
+    cursor: pointer;
+  }
+  
+  #todo-list > li > div > input {
+    width: 20px;
+    height: 20px;
+  }
+  
+  #todo-list > li > span.checked {
+    text-decoration: line-through;
+  }
+  
