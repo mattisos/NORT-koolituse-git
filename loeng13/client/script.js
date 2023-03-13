@@ -74,7 +74,7 @@ async function toggleTodo(todoId) {
   headers: {
     "Content-Type": "application/json",
   },
-  body: JSON.stringify({ todoId: todoId })
+  body: JSON.stringify({ id: todoId })
 });
 const todos = await response.json();
 todoItems = todos;
@@ -97,7 +97,7 @@ const response = await fetch('https://expressjs-postgres-production-31c4.up.rail
   headers: {
     "Content-Type": "application/json",
   },
-  body: JSON.stringify({ todoId: todoId })
+  body: JSON.stringify({ id: todoId })
 });
 const todos = await response.json();
 todoItems = todos;
