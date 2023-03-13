@@ -34,7 +34,7 @@ function renderTodos() {
 }
 
 async function loadTodos() {
-  const response = await fetch('https://expressjs-postgres-production-31c4.up.railway.app/');
+  const response = await fetch('https://expressjs-postgres-production-5995.up.railway.app/');
   const todos = await response.json();
   todoItems = todos;
   renderTodos();
@@ -48,7 +48,7 @@ async function addTodo() {
     return;
   }
 
-  const response = await fetch('https://expressjs-postgres-production-31c4.up.railway.app/', {
+  const response = await fetch('https://expressjs-postgres-production-5995.up.railway.app/', {
     method: 'POST',
     headers: {
       "Content-Type": "application/json",
@@ -62,45 +62,30 @@ async function addTodo() {
   todoInputHtml.value = '';
 }
 
-async function toggleTodo(todoId) {
-  for (let i = 0; i < todoItems.length; i++) {
-    if (todoItems[i].id == todoId) {
-      todoItems[i].ischecked = !todoItems[i].ischecked;
-      break;
-    }
-  }
-  const response = await fetch('https://expressjs-postgres-production-31c4.up.railway.app/', {
-  method: 'PUT',
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify({ id: todoId })
-});
-const todos = await response.json();
-todoItems = todos;
+async function toggleTodo(todoIdToToggle) {
+  const response = await fetch('https://expressjs-postgres-production-5995.up.railway.app/', {
+    method: 'PUT',
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ id: todoIdToToggle })
+  });
+  const todos = await response.json();
+  todoItems = todos;
 
   renderTodos();
 }
 
 async function deleteTodo(todoId) {
-  /*
-  for (let i = 0; i < todoItems.length; i++) {
-    if (todoItems[i].id == todoId) {
-      todoItems.splice(i, 1);
-      break;
-    }
-  }
-  */
+  const response = await fetch('https://expressjs-postgres-production-5995.up.railway.app/', {
+    method: 'DELETE',
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ id: todoId })
+  });
+  const todos = await response.json();
+  todoItems = todos;
 
-const response = await fetch('https://expressjs-postgres-production-31c4.up.railway.app/', {
-  method: 'DELETE',
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify({ id: todoId })
-});
-const todos = await response.json();
-todoItems = todos;
-
-renderTodos();
+  renderTodos();
 }
