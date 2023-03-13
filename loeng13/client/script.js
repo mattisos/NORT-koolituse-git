@@ -14,7 +14,7 @@ function renderTodos() {
 
   for (let i = 0; i < todoItems.length; i++) {
     let checkedString = '';
-    if (todoItems[i].isChecked) {
+    if (todoItems[i].ischecked) {
       checkedString = 'checked'
     }
     todoListHtml.innerHTML += `
@@ -65,7 +65,7 @@ async function addTodo() {
 async function toggleTodo(todoId) {
   for (let i = 0; i < todoItems.length; i++) {
     if (todoItems[i].id == todoId) {
-      todoItems[i].isChecked = !todoItems[i].isChecked;
+      todoItems[i].ischecked = !todoItems[i].ischecked;
       break;
     }
   }
