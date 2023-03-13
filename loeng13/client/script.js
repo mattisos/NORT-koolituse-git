@@ -48,7 +48,7 @@ async function addTodo() {
     return;
   }
 
-  const response = await fetch('http://localhost:8081', {
+  const response = await fetch('https://expressjs-postgres-production-31c4.up.railway.app/', {
     method: 'POST',
     headers: {
       "Content-Type": "application/json",
@@ -69,7 +69,7 @@ async function toggleTodo(todoId) {
       break;
     }
   }
-  const response = await fetch('http://localhost:8081', {
+  const response = await fetch('https://expressjs-postgres-production-31c4.up.railway.app/', {
   method: 'PUT',
   headers: {
     "Content-Type": "application/json",
@@ -92,7 +92,7 @@ async function deleteTodo(todoId) {
   }
   */
 
-const response = await fetch('http://localhost:8081', {
+const response = await fetch('https://expressjs-postgres-production-31c4.up.railway.app/', {
   method: 'DELETE',
   headers: {
     "Content-Type": "application/json",
